@@ -24,7 +24,7 @@ const App: React.FC = () => {
 
   // Function to simulate requests
   const simulateRequest = async (route: string) => {
-    await fetch(`http://localhost:3001${route}`);
+    await fetch(`https://4e52-197-23-196-186.ngrok-free.app${route}`);
   };
 
   return (
