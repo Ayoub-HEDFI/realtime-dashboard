@@ -28918,7 +28918,7 @@ module.exports = reloadCSS;
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"App.tsx":[function(require,module,exports) {
+},{"./../img/choco.jpg":[["choco.9ac784ea.jpg","../img/choco.jpg"],"../img/choco.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"App.tsx":[function(require,module,exports) {
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
@@ -29001,7 +29001,8 @@ var App = function App() {
     counters = _ref2[0],
     setCounters = _ref2[1];
   (0, react_1.useEffect)(function () {
-    var ws = new WebSocket("ws://".concat(window.location.hostname, ":3001"));
+    var ws = new WebSocket("ws://4e52-197-23-196-186.ngrok-free.app/");
+    console.log("ws://".concat(window.location.hostname, ":3001"));
     ws.onmessage = function (event) {
       var data = JSON.parse(event.data);
       setCounters(data);
@@ -29091,7 +29092,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43725" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33221" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

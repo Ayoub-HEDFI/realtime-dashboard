@@ -10,8 +10,8 @@ const App: React.FC = () => {
   const [counters, setCounters] = useState<Counter>({ juice: 0, chocolate: 0 });
 
   useEffect(() => {
-    const ws = new WebSocket(`ws://${window.location.hostname}:3001`);
-
+    const ws = new WebSocket(`ws://4e52-197-23-196-186.ngrok-free.app/`);
+    console.log(`ws://${window.location.hostname}:3001`);
     ws.onmessage = (event: MessageEvent) => {
       const data = JSON.parse(event.data);
       setCounters(data);
@@ -24,7 +24,7 @@ const App: React.FC = () => {
 
   // Function to simulate requests
   const simulateRequest = async (route: string) => {
-    await fetch(`https://4e52-197-23-196-186.ngrok-free.app${route}`);
+    await fetch(`http://localhost:3001${route}`);
   };
 
   return (
